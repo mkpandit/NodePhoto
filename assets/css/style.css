@@ -1,0 +1,19 @@
+h4.main-title {
+    margin: 15px 0px 15px 0px;
+}
+
+div.image-holder {
+    display: none;
+}
+
+img.uploaded-image{
+    margin: 0 20px 0 0px;
+    border-radius: 10px;
+}
+
+img.grid-image {
+    max-width: 90%;
+    max-height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}

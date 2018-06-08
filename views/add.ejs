@@ -1,0 +1,33 @@
+<%- include layouts/header.ejs %>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            
+            <div class="image-holder"></div>
+            
+            <div class="form-group">
+                <label for="imageTitle">Image Title</label>
+                <input type="text" name="imagetitle" id="imageTitle" class="form-control" placeholder="Image Title" />
+            </div>
+            <div class="form-group">
+                <label for="imageTag">Image Tags</label>
+                <input type="text" name="imagetag" id="imageTag" class="form-control" placeholder="Image Tags" />
+            </div>
+            <div class="form-group">
+                <label for="imageDescription">Image Description</label>
+                <input type="textarea" name="imagedescription" id="imageDescription" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="profilePic">Profile picture</label>
+                <input type="file" id="profilePic" name="profilePic[]" class="form-control-file" multiple="multiple">
+            </div>
+            <div class="form-group">
+                <button id="profilePicButton" type="submit" name="submit" class="btn btn-primary mb-2">Submit</button>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    
+
+<%- include layouts/footer.ejs %>
