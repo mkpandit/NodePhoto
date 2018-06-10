@@ -37,16 +37,23 @@ var upload = multer( {
 router.post( '/add', upload.array( 'imageFile', 5 ), ( req, res, next) => {
     fileReturns = req.files;
     var pathArray = [];
+    var nameArray = [];
     for( var i = 0; i < fileReturns.length; i++  ) {
-        /*
-        jimp.read( fileReturns[i].path ).then( function( data ) {
-            return data.crop( 0, 0, 200, 200 ).write( 'thumbnail/' + fileReturns[i].name  );
+        pathArray.push( fileReturns[i].path.replace( 'images', 'resized' ) );
+        nameArray.push( fileReturns[i].filename );
+    }
+
+    nameArray.forEach( image => {
+        jimp.read( 'uploads/images/' + image ).then( function( data ) {
+            console.log( 'Cropped ' + image );
+            return data.
+            resize( 200, jimp.AUTO ).
+            write( 'uploads/resized/' + image  );
         } ).catch( function( err) {
             console.log( err );
         } );
-        */
-        pathArray.push( fileReturns[i].path );
-    }
+    } );
+
     MongoClient.connect( dbUrl, ( dberr, client ) => {
         if( dberr ){
             console.log( dberr );

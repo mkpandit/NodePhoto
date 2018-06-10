@@ -1,26 +1,26 @@
 # Node Photo Album
 
 ### Technology used:
-- NodeJS
+- NodeJS (Express, JIMP)
 - MongoDB
-- JIMP
 - Bootstrap
 - FontAwesome
 
 ### Functionality
-- Add image
+- Upload (multiple) image - `http://localhost:3090/add`
     - Title
     - TAG
     - Description
-- Crop/resize image while uploading
-- List image
+- Resize image while uploading
+- Saves both resized and original size image
+- List image - `http://localhost:3090`
 
 
 ### API
 - Add image API
-    - Access point: http://localhost:3090/api/add
+    - Access point: `http://localhost:3090/api/add`
 - GET image list API
-    - Access point: http://localhost:3090/api
+    - Access point: `http://localhost:3090/api`
 
 ### Usage
 - Get NodeJS (npm comes with it) and MongoDB up and running
